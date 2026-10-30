@@ -4,14 +4,16 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Ruta principal
+// Ruta principal - Versión 2.0
 app.get('/', (req, res) => {
   res.json({
-    mensaje: '¡Aplicación desplegada con Dokploy!',
+    mensaje: '¡Aplicación actualizada automáticamente con Dokploy!',
+    version: '2.0',
     institucion: 'Universidad del Quindío',
     programa: 'Ingeniería de Sistemas y Computación',
     curso: 'Administración de Infraestructura de TI',
     plataforma: 'Dokploy PaaS',
+    despliegue: 'Automático mediante GitHub',
     fecha: new Date().toISOString()
   });
 });
